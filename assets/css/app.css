@@ -1,0 +1,63 @@
+/* This file is for your main application CSS */
+
+:root {
+  --bg-color: #E0C9A6; 
+  --secondary-color: #000000;
+  background-color: var(--bg-color);
+  width: 80%;
+  margin: auto;
+}
+
+body {
+  display: grid;  
+  grid-template: 
+    "h h h"
+    "nav content right";
+}
+
+#mainContent {
+  grid-area: content;
+}
+
+#nav {
+  grid-area: nav;
+}
+
+.create-note form {
+  grid-area: content;
+  display: grid;
+  width: 100%;
+  min-height: 10rem; 
+  grid-template-columns: 1fr 0.25fr;
+  gap: 1rem;
+}
+
+.create-note textarea {
+  background: var(--bg-color);
+  border: 1px solid;
+  border-radius: 3px;
+}
+
+.create-note button {
+  border-radius: 3px;
+  background: var(--bg-color);
+  border: 2px solid var(--secondary-color);
+  width: 4rem;
+  height: 2rem;
+}
+
+.note {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+
+.note-list .note:not(:last-child) {
+  border-bottom: 2px dashed;
+}
+
+.note span {
+  justify-self: flex-end;  
+}
