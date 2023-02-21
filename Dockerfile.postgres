@@ -1,0 +1,3 @@
+FROM "postgres"
+
+COPY ./config/search/monitor_synonyms.syn /usr/share/postgresql/15/tssearch_data/monitor_synonyms.syn

@@ -18,12 +18,7 @@ defmodule MonitorWeb.Router do
     pipe_through :browser
 
     live "/", Live.Home, :index
-
-    get "/day/:num", DayController, :index
-    get "/week", WeekController, :index
-    get "/month", MonthController, :index
-    get "/quarter", QuarterController, :index
-    get "/year", YearController, :index
+    live "/day/:num", Live.List, :index
   end
 
   scope "/notes", MonitorWeb do

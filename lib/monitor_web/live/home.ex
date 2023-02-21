@@ -21,7 +21,7 @@ defmodule MonitorWeb.Live.Home do
   end
 
   def mount(_params, _session, socket) do
-    Monitor.Note.subscribe()
+    Monitor.Note.Channel.subscribe()
 
     {:ok, fetch(socket)}
   end
